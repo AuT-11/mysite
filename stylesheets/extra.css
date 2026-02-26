@@ -1,0 +1,132 @@
+/* ============ SPLASH: full-screen landing ============ */
+
+/* 只要页面路径是 /splash/，JS 会给 <html> 加 is-splash */
+.is-splash,
+.is-splash body {
+  height: 100%;
+}
+
+/* 禁止 splash 页面滚动（你要求“不用下拉”） */
+.is-splash body {
+  overflow: hidden !important;
+}
+
+/* 隐藏 Material 的壳：顶部栏/标签/左右侧栏 */
+.is-splash .md-header,
+.is-splash .md-tabs,
+.is-splash .md-sidebar--primary,
+.is-splash .md-sidebar--secondary {
+  display: none !important;
+}
+
+/* 去掉内容区的边距和最大宽度限制 */
+.is-splash .md-main__inner,
+.is-splash .md-content,
+.is-splash .md-content__inner {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none !important;
+}
+
+/* splash 容器真正占满整个视口 */
+.splash {
+  position: fixed;
+  inset: 0;
+  background-image: url("../assets/img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 遮罩：提升文字可读性 */
+.splash__overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.20), rgba(0,0,0,0.60));
+}
+
+/* 内容布局 */
+.splash__content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: min(920px, 92vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 56px;
+  color: #fff;
+}
+
+.splash__brand {
+  font-size: clamp(56px, 6vw, 92px);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.0;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.splash__subtitle {
+  margin-top: 14px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.splash__quote {
+  margin-top: 22px;
+  display: inline-block;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  width: fit-content;
+  font-size: 18px;
+}
+
+/* 按钮 */
+.splash__actions {
+  margin-top: 26px;
+}
+
+.splash__btn {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1a1a1a;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+  transition: transform .15s ease, opacity .15s ease;
+}
+
+.splash__btn:hover {
+  transform: translateY(-1px);
+}
+
+.splash__btn:active {
+  transform: translateY(1px);
+}
+
+/* 入场动画（页面加载时） */
+.is-splash .splash__content {
+  animation: splashIn 650ms ease-out both;
+}
+
+@keyframes splashIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 点击“开始”时的淡出动画（JS 会加 class） */
+.is-splash .splash.is-leaving {
+  animation: splashOut 280ms ease-in both;
+}
+
+@keyframes splashOut {
+  from { opacity: 1; transform: scale(1); }
+  to   { opacity: 0; transform: scale(1.01); }
+}
+
