@@ -4,4 +4,20 @@
          <loc>https://YOUR_GITHUB_USERNAME.github.io/mysite/</loc>
          <lastmod>2026-02-26</lastmod>
     </url>
+    <url>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/mysite/notes/start/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/mysite/notes/ml/intro/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/mysite/projects/project-a/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://YOUR_GITHUB_USERNAME.github.io/mysite/resources/pdfs/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
 </urlset>
