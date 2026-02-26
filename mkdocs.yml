@@ -1,0 +1,49 @@
+site_name: My Docs Blog
+site_description: Notes, projects, and resources
+site_url: https://YOUR_GITHUB_USERNAME.github.io/mysite/
+repo_url: https://github.com/YOUR_GITHUB_USERNAME/mysite
+repo_name: YOUR_GITHUB_USERNAME/mysite
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - toc.integrate
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: 切换夜间模式
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: 切换日间模式
+
+plugins:
+  - search
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+
+nav:
+  - 首页: index.md
+  - 笔记:
+      - 快速开始: notes/start.md
+      - ML:
+          - 入门: notes/ml/intro.md
+  - 项目:
+      - Project A: projects/project-a.md
+  - 资料库:
+      - PDF汇总: resources/pdfs.md
