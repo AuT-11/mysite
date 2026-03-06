@@ -1,51 +1,317 @@
-.hero{
-text-align:center;
-margin-top:40px;
-margin-bottom:60px;
+/* =====================================================
+   SPLASH LANDING PAGE
+===================================================== */
+
+.is-splash,
+.is-splash body {
+  height: 100%;
 }
 
-.avatar{
-width:140px;
-border-radius:50%;
-margin-bottom:20px;
-box-shadow:0 6px 20px rgba(0,0,0,0.2);
+.is-splash body {
+  overflow: hidden !important;
 }
+
+/* 隐藏 Material 组件 */
+.is-splash .md-header,
+.is-splash .md-tabs,
+.is-splash .md-sidebar--primary,
+.is-splash .md-sidebar--secondary {
+  display: none !important;
+}
+
+/* 去掉默认布局限制 */
+.is-splash .md-main__inner,
+.is-splash .md-content,
+.is-splash .md-content__inner {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none !important;
+}
+
+/* 背景 */
+.splash {
+  position: fixed;
+  inset: 0;
+  background-image: url("../assets/img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 遮罩 */
+.splash__overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.6)
+  );
+}
+
+/* 内容 */
+.splash__content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: min(920px, 92vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 56px;
+  color: #fff;
+}
+
+.splash__brand {
+  font-size: clamp(56px, 6vw, 92px);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
+.splash__subtitle {
+  margin-top: 14px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.splash__quote {
+  margin-top: 22px;
+  display: inline-block;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  font-size: 18px;
+}
+
+/* 按钮 */
+.splash__actions {
+  margin-top: 26px;
+}
+
+.splash__btn {
+  border: 0;
+  cursor: pointer;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1a1a1a;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+  transition: transform .15s ease;
+}
+
+.splash__btn:hover {
+  transform: translateY(-2px);
+}
+
+/* 入场动画 */
+
+.is-splash .splash__content {
+  animation: splashIn 650ms ease-out both;
+}
+
+@keyframes splashIn {
+  from { opacity:0; transform:translateY(10px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+/* 离开动画 */
+
+.is-splash .splash.is-leaving {
+  animation: splashOut 280ms ease-in both;
+}
+
+@keyframes splashOut {
+  from {opacity:1;}
+  to {opacity:0;}
+}
+
+
+/* =====================================================
+   BLOG HERO SECTION
+===================================================== */
+
+.hero {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:60px;
+  margin-bottom:60px;
+  gap:60px;
+}
+
+.hero-text{
+  flex:1;
+}
+
+.hero-text h1{
+  font-size:3rem;
+  margin-bottom:10px;
+}
+
+.hero-text p{
+  font-size:1.1rem;
+  opacity:0.8;
+}
+
+.hero-buttons{
+  margin-top:25px;
+}
+
+.hero-buttons .md-button{
+  margin-right:10px;
+  margin-top:10px;
+}
+
+.hero-avatar{
+  flex:0 0 260px;
+  text-align:center;
+}
+
+.hero-avatar img{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);
+  transition:0.3s;
+}
+
+.hero-avatar img:hover{
+  transform:scale(1.05);
+}
+
+
+/* =====================================================
+   STATS CARDS
+===================================================== */
 
 .stats{
-display:flex;
-gap:20px;
-justify-content:center;
-margin-top:30px;
-flex-wrap:wrap;
+  display:flex;
+  gap:25px;
+  margin-top:30px;
+  margin-bottom:50px;
+  flex-wrap:wrap;
 }
 
 .stat-card{
-background:white;
-border-radius:12px;
-padding:20px;
-width:200px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:0.3s;
+  flex:1;
+  min-width:180px;
+  background:white;
+  border-radius:14px;
+  padding:25px;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
 }
 
 .stat-card:hover{
-transform:translateY(-5px);
+  transform:translateY(-6px);
 }
 
-.tech{
-display:flex;
-gap:25px;
-flex-wrap:wrap;
-margin-top:20px;
-align-items:center;
+.stat-card h2{
+  font-size:2rem;
+  margin-bottom:5px;
 }
 
-.tech img{
-width:50px;
-transition:0.3s;
+.stat-card p{
+  opacity:0.7;
 }
 
-.tech img:hover{
-transform:scale(1.2);
+
+/* =====================================================
+   TECH STACK
+===================================================== */
+
+.tech-stack{
+  margin-top:20px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+}
+
+.tech-stack img{
+  width:50px;
+  transition:0.25s;
+}
+
+.tech-stack img:hover{
+  transform:scale(1.2);
+}
+
+
+/* =====================================================
+   GITHUB SECTION
+===================================================== */
+
+.github-section{
+  margin-top:40px;
+}
+
+.github-section img{
+  max-width:100%;
+}
+
+
+/* =====================================================
+   RECENT POSTS
+===================================================== */
+
+.recent-posts{
+  margin-top:40px;
+}
+
+.post-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:20px;
+}
+
+.post-card{
+  background:white;
+  border-radius:14px;
+  padding:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.post-card:hover{
+  transform:translateY(-5px);
+}
+
+.post-card h3{
+  margin-bottom:8px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media screen and (max-width:900px){
+
+.hero{
+  flex-direction:column;
+  text-align:center;
+}
+
+.hero-avatar{
+  margin-top:30px;
+}
+
+.hero-avatar img{
+  width:180px;
+  height:180px;
+}
+
+.stats{
+  flex-direction:column;
+}
+
+.tech-stack{
+  justify-content:center;
+}
+
 }
