@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -222,7 +227,7 @@
   
     
   
-  首页
+  Home
 
       </a>
     </li>
@@ -241,7 +246,7 @@
           
   
   
-  笔记
+  Tecnology
 
         </a>
       </li>
@@ -261,27 +266,7 @@
           
   
   
-  项目
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="resources/pdfs/" class="md-tabs__link">
-          
-  
-  
-  资料库
+  Class
 
         </a>
       </li>
@@ -348,7 +333,7 @@
   <span class="md-ellipsis">
     
   
-    首页
+    Home
   
 
     
@@ -393,7 +378,7 @@
   <span class="md-ellipsis">
     
   
-    笔记
+    Tecnology
   
 
     
@@ -409,7 +394,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    笔记
+    Tecnology
   
 
           </label>
@@ -429,7 +414,7 @@
   <span class="md-ellipsis">
     
   
-    开始
+    About
   
 
     
@@ -482,7 +467,7 @@
   <span class="md-ellipsis">
     
   
-    项目
+    Class
   
 
     
@@ -498,7 +483,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    项目
+    Class
   
 
           </label>
@@ -518,96 +503,7 @@
   <span class="md-ellipsis">
     
   
-    Project A
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    资料库
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    资料库
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="resources/pdfs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PDF列表
+    About
   
 
     
@@ -646,6 +542,64 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最近内容
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最近内容">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📘 学习笔记
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 项目
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 资料库
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -671,18 +625,70 @@
 
   <h1>Home</h1>
 
-<ul>
-<li></li>
-</ul>
-<hr />
-<p>title: AuT Blog</p>
-<hr />
-<script>
-    // root -> splash
-    window.location.replace('./splash/');
-  </script>
+<div class="hero">
 
-<p>如果没有自动跳转，请点击： <a href="./splash/">进入入场页</a></p>
+<div class="hero-text">
+
+# AuT
+
+**FinTech · AI · Robotics**
+
+欢迎来到我的技术博客，这里记录：
+
+- 📘 学习笔记（ML / AI / CS）
+- 🧠 科研项目与实验
+- 📂 资料库与PDF资源
+
+<div class="hero-buttons">
+
+<a class="md-button md-button--primary" href="./notes/">
+📚 笔记
+</a>
+
+<a class="md-button" href="./projects/">
+🚀 项目
+</a>
+
+<a class="md-button" href="./resources/">
+📂 资料库
+</a>
+
+<a class="md-button" href="https://github.com/AuT-11">
+GitHub
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-avatar">
+
+<img src="assets/images/avatar.png">
+
+</div>
+
+</div>
+
+<hr />
+<h2 id="_1">最近内容<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">📘 学习笔记<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Machine Learning</li>
+<li>Python / AI Engineering</li>
+<li>Computer Science</li>
+</ul>
+<h3 id="_3">🚀 项目<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>AI Agent</li>
+<li>Robotics</li>
+<li>FinTech</li>
+</ul>
+<h3 id="_4">📂 资料库<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>课程PDF</li>
+<li>技术文档</li>
+<li>研究资料</li>
+</ul>
 
 
 

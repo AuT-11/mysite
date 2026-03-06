@@ -130,3 +130,60 @@
   to   { opacity: 0; transform: scale(1.01); }
 }
 
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.hero-buttons{
+    margin-top:20px;
+}
+
+.hero-buttons .md-button{
+    margin-right:10px;
+    margin-top:10px;
+}
+
+.hero-avatar{
+    flex:0 0 260px;
+    text-align:center;
+}
+
+.hero-avatar img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* 移动端适配 */
+
+@media screen and (max-width: 900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-avatar{
+    margin-top:30px;
+}
+
+.hero-avatar img{
+    width:180px;
+    height:180px;
+}
+
+}
